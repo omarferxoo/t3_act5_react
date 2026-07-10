@@ -3,11 +3,11 @@
     {
       "id": "1",
       "text": "nolose",
-      "completed": false
+      "completed": true
     },
     {
       "text": "nuevo",
-      "completed": false,
+      "completed": true,
       "id": "G-0Ri1Ct7G8"
     },
     {

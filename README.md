@@ -6,7 +6,7 @@ INSTITUTO TECNOLOGICO DE OAXACA
 
 Departamento de Ingenieria en Sistemas Computacionales
 
-<img src="img/logoportada.png" alt="Logo de portada" width="260">
+
 
 Materia: Programacion Web
 
