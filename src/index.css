@@ -20,8 +20,8 @@ button {
 
 .containerTodoApp {
   width: 100%;
-  max-width: 980px;
-  margin: 120px auto 0;
+  max-width: 920px;
+  margin: 64px auto;
   padding: 0 80px;
 }
 

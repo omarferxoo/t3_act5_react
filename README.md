@@ -6,7 +6,7 @@ INSTITUTO TECNOLOGICO DE OAXACA
 
 Departamento de Ingenieria en Sistemas Computacionales
 
-
+<img src="img/logoportada.png" alt="Logo de portada" width="260">
 
 Materia: Programacion Web
 
@@ -26,60 +26,64 @@ Oaxaca, Oaxaca, 04 de Julio de 2026
 
 # t3_act5_react
 
-Mini aplicacion hecha con React y Vite. El proyecto consiste en una lista de notas/tareas donde se practican componentes, props, estado con `useState`, efectos con `useEffect`, eventos, renderizado condicional y listas con `.map()`.
+Mini aplicacion propia creada con React y Vite. El proyecto es un **Planificador de estudio** donde se pueden agregar temas, marcar temas como completados, ajustar un contador de minutos de estudio y mostrar u ocultar un consejo.
+
+La aplicacion fue hecha para practicar lo visto en el video: componentes funcionales, props, estado con `useState`, eventos, renderizado condicional y listas dinamicas con `.map()`.
 
 ## Funcionalidades
 
-- Crear notas desde un formulario.
-- Mostrar una lista dinamica de notas.
-- Marcar y desmarcar notas como completadas.
-- Editar el texto de una nota.
-- Eliminar notas.
-- Uso de iconos con `lucide-react`.
-- Uso de CSS Modules para estilos por componente.
+- Agregar un nuevo tema de estudio.
+- Mostrar una lista dinamica de temas usando `.map()`.
+- Marcar y desmarcar temas como completados.
+- Cambiar un contador de minutos con botones.
+- Mostrar u ocultar un consejo de estudio.
+- Mostrar una tarjeta de perfil usando props.
+- Estilos responsivos para computadora, tablet y celular.
 
 ## Componentes usados
 
-- `TodoApp`: componente principal de la mini aplicacion. Maneja el estado de las notas y renderiza la lista.
-- `TodoForm`: componente con props para agregar una nueva nota.
-- `EditNoteForm`: componente con props para editar una nota existente.
+- `StudyPlanner`: componente principal de la mini aplicacion.
+- `Encabezado`: componente funcional simple.
+- `PerfilEstudiante`: componente que recibe y muestra props.
 
 ## Preguntas
 
-### a) ¿Que diferencia hay entre props y state en React?
+### a) Que diferencia hay entre props y state en React?
 
-Las `props` son datos que un componente recibe desde otro componente. Sirven para pasar informacion de un componente padre a un componente hijo. En cambio, el `state` es informacion interna que pertenece a un componente y puede cambiar durante la ejecucion de la aplicacion.
+Las `props` son datos que un componente recibe desde otro componente. Sirven para pasar informacion de un componente padre a un componente hijo. Normalmente el componente que recibe props solo las usa para mostrar informacion o ejecutar una funcion recibida.
 
-Por ejemplo, en mi proyecto `TodoForm` recibe la prop `onAgregarNota`, mientras que `TodoApp` usa state para guardar la lista de notas.
+El `state` es informacion interna de un componente. Puede cambiar con el tiempo y cuando cambia React actualiza lo que se ve en pantalla.
 
-### b) ¿Por que es importante usar una key al renderizar una lista de elementos?
+En mi proyecto, `PerfilEstudiante` recibe props como `nombre`, `grupo` y `meta`. En cambio, `StudyPlanner` usa state para guardar los temas, el texto del nuevo tema, los minutos y si se muestra o no el consejo.
 
-La `key` ayuda a React a identificar cada elemento de una lista. Esto es importante porque cuando la lista cambia, React puede saber que elemento se agrego, elimino o actualizo sin volver a renderizar todo de forma innecesaria.
+### b) Por que es importante usar una key al renderizar una lista de elementos?
 
-En mi aplicacion uso:
+La `key` ayuda a React a identificar cada elemento de una lista. Esto es importante porque cuando se agrega, elimina o cambia un elemento, React puede actualizar solo lo necesario.
+
+En mi aplicacion la uso al renderizar los temas:
 
 ```jsx
-notas.map((nota) => (
-    <li key={nota.id}>
-        {nota.text}
+temas.map((tema) => (
+    <li key={tema.id}>
+        {tema.titulo}
     </li>
 ))
 ```
 
 ### c) Explica con tus propias palabras que hace la funcion useState y da un ejemplo de donde la usaste en tu mini aplicacion.
 
-`useState` permite crear una variable de estado en un componente funcional. Esta variable puede cambiar y cuando cambia React actualiza la pantalla automaticamente.
+`useState` permite crear una variable que React puede recordar y actualizar. Cuando esa variable cambia usando su funcion `set`, React vuelve a renderizar el componente para mostrar el nuevo valor.
 
-En mi proyecto lo use para guardar las notas:
+En mi aplicacion lo use para guardar la lista de temas:
 
 ```jsx
-const [notas, setNotas] = useState([]);
+const [temas, setTemas] = useState(temasIniciales);
 ```
 
-Tambien lo use para saber que nota se esta editando:
+Tambien lo use para el contador de minutos:
 
 ```jsx
-const [notaEditandoId, setNotaEditandoId] = useState(null);
+const [minutos, setMinutos] = useState(25);
 ```
 
 ### d) Enlace del repositorio de GitHub

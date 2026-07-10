@@ -1,9 +1,9 @@
-import TodoApp from './components/TodoApp';
+import StudyPlanner from "./components/StudyPlanner";
 
 function App() {
   return (
     <section className="containerTodoApp">
-       <TodoApp />
+       <StudyPlanner />
     </section>
   );
   }
