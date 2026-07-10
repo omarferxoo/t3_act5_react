@@ -7,7 +7,7 @@ body{
   background-color: #222;
   color: #fff;
   font-family: system-ui;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 button {
@@ -23,4 +23,18 @@ button {
   max-width: 980px;
   margin: 120px auto 0;
   padding: 0 80px;
+}
+
+@media (max-width: 768px) {
+  .containerTodoApp {
+    margin-top: 48px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerTodoApp {
+    margin-top: 32px;
+    padding: 0 16px;
+  }
 }

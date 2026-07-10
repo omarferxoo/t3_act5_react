@@ -1,7 +1,7 @@
 .titulo {
-    font-size: 3rem;
+    font-size: clamp(2rem, 10vw, 3rem);
     color: orange;
-    margin-bottom: 70px;
+    margin-bottom: clamp(32px, 8vw, 70px);
     text-align: center;
 }
 
@@ -13,16 +13,22 @@
 
 .noteItem {
     padding: 12px 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
 }
 
 .noteContent {
     display: flex;
     align-items: center;
+    gap: 16px;
     justify-content: space-between;
 }
 
+.noteContent span {
+    overflow-wrap: anywhere;
+}
+
 .iconsContainer {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -75,4 +81,30 @@
 .cancelButton {
     background-color: #e11d48;
     color: #222;
+}
+
+@media (max-width: 560px) {
+    .noteContent {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .iconsContainer {
+        width: 100%;
+    }
+
+    .toggleButton {
+        margin-right: auto;
+    }
+
+    .editContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .editForm {
+        flex-basis: 100%;
+        margin-bottom: 8px;
+    }
 }
