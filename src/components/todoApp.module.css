@@ -1,0 +1,78 @@
+.titulo {
+    font-size: 3rem;
+    color: orange;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.noteList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noteItem {
+    padding: 12px 0;
+    font-size: 1.5rem;
+}
+
+.noteContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconsContainer svg {
+    cursor: pointer;
+}
+
+.toggleButton {
+    width: auto;
+    padding: 4px 8px;
+    margin-right: 0;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.editContainer {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 14px;
+    padding: 8px;
+    width: 100%;
+}
+
+.editForm {
+    border: 2px solid #222;
+    border-radius: 4px;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.saveButton,
+.cancelButton {
+    width: auto;
+    padding: 4px 8px;
+    margin-left: 0;
+    margin-right: 6px;
+    font-size: 0.8rem;
+}
+
+.saveButton {
+    background-color: #22c55e;
+    color: #222;
+}
+
+.cancelButton {
+    background-color: #e11d48;
+    color: #222;
+}

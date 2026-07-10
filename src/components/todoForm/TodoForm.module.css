@@ -1,0 +1,29 @@
+.formContainer {
+    text-align: center;
+}
+
+.formContainer h2 {
+    margin-bottom: 30px;
+}
+
+.formContainer form {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.formContainer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    min-width: 155px;
+    padding: 10px 18px;
+    margin-right: 0;
+    background-color: #fff;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 400;
+}
